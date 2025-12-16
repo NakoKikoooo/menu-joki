@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIKO JOKI GENSHIN | Tingkatkan Akun Anda</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+            <div class="brand-name">KIKO JOKI GENSHIN</div>
+            <nav>
+                <ul>
+                    <li><a href="#layanan-harga">Layanan & Harga</a></li> 
+                    <li><a href="#formulir">Pesan Sekarang</a></li>
+                    <li><a href="http://localhost:3000/api/orders" target="_blank">Cek Pesanan</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero-banner">
+        <div class="container">
+            <div class="hero-content">
+                <p class="tagline">Jasa Joki Terbaik dan Terpercaya</p>
+                <h1>Tingkatkan Akun Anda Sekarang!</h1>
+                <p>Cepat, Aman, dengan Harga Terjangkau untuk semua kebutuhan Anda.</p>
+                <a href="#formulir" class="button-link">Pesan Joki Sekarang</a>
+            </div>
+        </div>
+    </div>
+    <div class="container"> 
+        
+        <section id="layanan-harga">
+            <h2>Layanan Kami (Klik Ikon untuk Lihat Harga)</h2>
+            
+            <div class="service-list">
+                
+                <div class="service-item-wrapper" id="wrapper-spyrall">
+                    <div class="service-item" data-service-id="spyrall">
+                        <img src="amber-icon.png" alt="Ikon Amber" class="service-icon">
+                        <div>
+                            <h3>Joki Spyrall Abyss, Stygiant Onslaught, Imaginarium Theater</h3>
+                            <p>Penyelesaian Full Star atau sesuai permintaan.</p>
+                        </div>
+                    </div>
+                    <div class="harga-layanan-detail" id="harga-spyrall" style="display: none;">
+                        <table class="harga-table-detail">
+                            <thead><tr><th>Layanan</th><th>Deskripsi</th><th>Harga Mulai</th></tr></thead>
+                            <tbody class="harga-body-detail"></tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="service-item-wrapper" id="wrapper-eksplorasi">
+                    <div class="service-item" data-service-id="eksplorasi">
+                        <img src="ganyu-icon.png" alt="Ikon Ganyu" class="service-icon">
+                        <div>
+                            <h3>Joki Eksplorasi Map</h3>
+                            <p>Ambil semua Chest & Seelie di area baru dan selesaikan puzzle.</p>
+                        </div>
+                    </div>
+                    <div class="harga-layanan-detail" id="harga-eksplorasi" style="display: none;">
+                        <table class="harga-table-detail">
+                            <thead><tr><th>Layanan</th><th>Deskripsi</th><th>Harga Mulai</th></tr></thead>
+                            <tbody class="harga-body-detail"></tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="service-item-wrapper" id="wrapper-daily">
+                    <div class="service-item" data-service-id="daily">
+                        <img src="xiao-icon.png" alt="Ikon Xiao" class="service-icon">
+                        <div>
+                            <h3>Joki Daily Commision Harian</h3>
+                            <p>Penyelesaian tugas Komisi Harian untuk mendapatkan Primogem.</p>
+                        </div>
+                    </div>
+                    <div class="harga-layanan-detail" id="harga-daily" style="display: none;">
+                        <table class="harga-table-detail">
+                            <thead><tr><th>Layanan</th><th>Deskripsi</th><th>Harga Mulai</th></tr></thead>
+                            <tbody class="harga-body-detail"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="service-item-wrapper" id="wrapper-jokiquest">
+                    <div class="service-item" data-service-id="jokiquest">
+                        <img src="hutao-icon.png" alt="Ikon Hu Tao" class="service-icon">
+                        <div>
+                            <h3>Joki Quest (Story/Event)</h3>
+                            <p>Pengerjaan Archon Quest, World Quest, dan Event terbatas.</p>
+                        </div>
+                    </div>
+                    <div class="harga-layanan-detail" id="harga-jokiquest" style="display: none;">
+                        <table class="harga-table-detail">
+                            <thead><tr><th>Layanan</th><th>Deskripsi</th><th>Harga Mulai</th></tr></thead>
+                            <tbody class="harga-body-detail"></tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="service-item-wrapper" id="wrapper-farming">
+                    <div class="service-item" data-service-id="farming">
+                        <img src="aether-icon.png" alt="Ikon Aether" class="service-icon">
+                        <div>
+                            <h3>Joki Farming Material</h3>
+                            <p>Farming material Ascension karakter, senjata, atau artefak.</p>
+                        </div>
+                    </div>
+                    <div class="harga-layanan-detail" id="harga-farming" style="display: none;">
+                        <table class="harga-table-detail">
+                            <thead><tr><th>Layanan</th><th>Deskripsi</th><th>Harga Mulai</th></tr></thead>
+                            <tbody class="harga-body-detail"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-top: 20px; color: #e74c3c; font-weight: 600;">*Harga dapat disesuaikan tergantung kompleksitas dan *progress* akun Anda.</p>
+
+        </section>
+
+        <section id="formulir">
+            <h2>Formulir Pemesanan Joki</h2>
+            
+            <form id="joki-form">
+                <div>
+                    <label for="nama">Nama Anda:</label>
+                    <input type="text" id="nama" name="nama" placeholder="Contoh: Traveler / Aether" required>
+                </div>
+
+                <h3>Pilih Metode Kontak Utama (Wajib):</h3>
+                <div style="margin-bottom: 15px;">
+                    <input type="radio" id="pilih_wa" name="metode_kontak" value="whatsapp" required>
+                    <label for="pilih_wa">Nomor WhatsApp</label>
+                    
+                    <input type="radio" id="pilih_discord" name="metode_kontak" value="discord">
+                    <label for="pilih_discord">Nama/ID Discord</label>
+                </div>
+
+                <div id="input-wa" style="display: none;">
+                    <label for="whatsapp">Nomor WhatsApp Aktif:</label>
+                    <input type="text" id="whatsapp" name="whatsapp" placeholder="Contoh: +62812xxxxxx">
+                </div>
+
+                <div id="input-discord" style="display: none;">
+                    <label for="discord">Nama/ID Discord:</label>
+                    <input type="text" id="discord" name="discord" placeholder="Contoh: NamaAnda#1234">
+                </div>
+
+                <div>
+                    <label for="server">Server Genshin:</label>
+                    <select id="server" name="server" required>
+                        <option value="Asia">Asia</option>
+                        <option value="Europe">Europe</option>
+                        <option value="America">America</option>
+                        <option value="TW/HK/MO">TW/HK/MO</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="layanan">Pilih Layanan:</label>
+                    <select id="layanan-jasa" name="layanan" required>
+                        <option value="Spyrall Abyss">Joki Spyrall Abyss</option>
+                        <option value="Explorasi Map">Joki Eksplorasi Map</option>
+                        <option value="Daily Commission">Joki Daily Commission</option>
+                        <option value="Joki Quest">Joki Quest (Story/Event)</option> 
+                        <option value="Farming Material">Joki Farming Material</option>
+                        <option value="Lainnya">Lainnya (Tulis di Catatan)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="catatan">Catatan Tambahan (Opsional):</label>
+                    <textarea id="catatan" name="catatan" rows="4" placeholder="Contoh: Fokus ke Inazuma..."></textarea>
+                </div>
+
+                <button type="submit">Kirim Pesanan</button>
+            </form>
+        </section>
+        
+        <section id="kontak">
+            <h2>Kontak Kami</h2>
+            <p>© 2025 KIKO JOKI GENSHIN. Layanan Joki Terpercaya.</p>
+            <p>Hubungi kami: WA +62-82230-412413</p>
+        </section>
+
+    </div> 
+    <footer>
+        <p>Terima kasih telah menggunakan jasa kami. Kami akan segera memproses pesanan Anda!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

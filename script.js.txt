@@ -1,0 +1,49 @@
+// script.js
+
+document.getElementById('joki-form').addEventListener('submit', function(event) {
+    // Mencegah form me-refresh halaman
+    event.preventDefault();
+
+    const nama = document.getElementById('nama').value;
+    const server = document.getElementById('server').value;
+    const layanan = document.getElementById('layanan-pilih').value;
+    const catatan = document.getElementById('catatan').value;
+
+    const orderData = {
+        nama: nama,
+        server: server,
+        layanan: layanan,
+        catatan: catatan
+    };
+
+    // --- MENGIRIM DATA KE SERVER BACKEND NODE.JS ---
+    fetch('http://localhost:3000/api/orders', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json' 
+        },
+        body: JSON.stringify(orderData)
+    })
+    .then(response => {
+        if (!response.ok) {
+            // Jika status error (400, 500, dll.)
+            return response.json().then(data => {
+                throw new Error(data.error || 'Terjadi kesalahan saat mengirim pesanan.');
+            });
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Respons sukses dari server (status 201)
+        alert(`Sukses! ${data.message} ID Pesanan: ${data.order.id}. Kami akan segera menghubungi Anda.`);
+        document.getElementById('joki-form').reset();
+        
+        // Cek log di browser console untuk debugging
+        console.log('Pesanan Berhasil Dikirim. Data:', data);
+    })
+    .catch(error => {
+        // Tangani error jika server mati atau koneksi gagal
+        alert(`Gagal mengirim pesanan. Error: ${error.message}. Pastikan server (node server.js) sedang berjalan.`);
+        console.error('Fetch Error:', error);
+    });
+});
